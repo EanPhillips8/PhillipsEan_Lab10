@@ -138,16 +138,18 @@ public class Main {
         }
 
 
-        private static boolean isTie () {
-            Boolean Oflag = false;
-            Boolean Xflag = false;
+        private static boolean isTie ()
+        {
+            boolean Oflag = false;
+            boolean Xflag = false;
 
-            for (int row = 0; row < ROW; row++) {
-                if (board[row][0].equals("X") && board[row][1].equals("X") && board[row]
+            for (int row = 0; row < ROW; row++)
+            {
+                if (board[row][0].equals("X") || board[row][1].equals("X") || board[row]
                         [2].equals("X")) {
                     Xflag = true;
                 }
-                if (board[row][0].equals("O") && board[row][1].equals("O") && board[row]
+                if (board[row][0].equals("O") || board[row][1].equals("O") || board[row]
                         [2].equals("O")) {
                     Oflag = true;
 
@@ -159,11 +161,11 @@ public class Main {
 
             }
             for (int col = 0; col < COL; col++) {
-                if (board[col][0].equals("X") && board[col][1].equals("X") && board[col]
+                if (board[col][0].equals("X") || board[col][1].equals("X") || board[col]
                         [2].equals("X")) {
                     Xflag = true;
                 }
-                if (board[col][0].equals("O") && board[col][1].equals("O") && board[col]
+                if (board[col][0].equals("O") || board[col][1].equals("O") || board[col]
                         [2].equals("O")) {
                     Oflag = true;
 
@@ -174,13 +176,13 @@ public class Main {
             }
             Xflag = Oflag = false;
 
-            if (board[0][0].equals("X") &&
-                    board[1][1].equals("X") &&
+            if (board[0][0].equals("X") ||
+                    board[1][1].equals("X") ||
                     board[2][2].equals("X")) {
                 Xflag = true;
             }
-            if (board[0][0].equals("O") &&
-                    board[1][1].equals("O") &&
+            if (board[0][0].equals("O") ||
+                    board[1][1].equals("O") ||
                     board[2][2].equals("O")) {
                 Oflag = true;
             }
@@ -190,13 +192,13 @@ public class Main {
             Xflag = Oflag = false;
 
 
-            if (board[0][2].equals("X") &&
-                    board[1][1].equals("X") &&
+            if (board[0][2].equals("X") ||
+                    board[1][1].equals("X") ||
                     board[2][0].equals("X")) {
                 Xflag = true;
             }
-            if (board[0][2].equals("O") &&
-                    board[1][1].equals("O") &&
+            if (board[0][2].equals("O") ||
+                    board[1][1].equals("O") ||
                     board[2][0].equals("O")) {
                 Oflag = true;
             }
